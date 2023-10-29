@@ -26,11 +26,11 @@ export function ProfileScreen() {
             </div>
             <div className={styles.stats}>
               <div>
-                <span>20.08.2002</span> - <span>7.10.2023</span>
+                <span>20.08.1999</span> - <span>7.10.2023</span>
               </div>
               &middot;
               <div>
-                <b>3,663</b> <span>🕯️</span>
+                <b>🕯️</b> <span>3,663</span>
               </div>
             </div>
             <p>
