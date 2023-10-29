@@ -1,0 +1,55 @@
+.profile_screen {
+  padding: $page-padding-block $content-padding-inline;
+}
+
+.profile {
+  display: flex;
+  gap: 5rem;
+
+  .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 3px $s-neutral-bg, 0 0 0 6px $s-neutral-300;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+
+    .headline {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      span {
+        color: $neutral;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 1rem;
+    }
+
+    p {
+    }
+  }
+}
