@@ -1,29 +1,29 @@
 import { Navbar } from "@/common/components/navbar";
 import React from "react";
 import styles from "./style.module.scss";
-import { ContentGrid } from "@/common/components/content";
+import { Grid } from "@/common/components/grid";
+import { Post } from "@/common/components/post";
+import { AppScreen } from "@/common/components/app-screen";
 
 export function ExsploreScreen() {
   return (
-    <>
+    <AppScreen>
       <div className={styles.container}>
-        <ContentGrid>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </ContentGrid>
+        <Grid>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+          <Post></Post>
+        </Grid>
       </div>
-
-      <Navbar />
-    </>
+    </AppScreen>
   );
 }

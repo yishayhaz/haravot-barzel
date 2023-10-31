@@ -1,4 +1,10 @@
+$content-max-width: 800px;
+
 // max content width is 800px
-$content-padding-inline: max(5%, calc((100vw - 800px) / 2));
+$content-padding-inline: max(5%, calc((100vw - $content-max-width) / 2));
+
+$grid-padding-inline: calc((100vw - $content-max-width) / 2);
 
 $page-padding-block: 3rem;
+
+$navbar-height: 60px;

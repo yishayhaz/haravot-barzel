@@ -1,10 +1,16 @@
 .profile_screen {
   padding: $page-padding-block $content-padding-inline;
 
-  @include flex($dir: column, $gap: 3rem, $align: stretch);
+  @include flex(
+    $dir: column,
+    $gap: 3rem,
+    $align: stretch,
+    $justify: flex-start
+  );
 
   .divider {
-    height: 3px;
+    padding-block: 2px;
+    width: 100%;
     background-color: $s-neutral-300;
   }
 }

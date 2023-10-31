@@ -1,9 +1,10 @@
 .contentGrid {
   width: 100%;
+  padding-inline: $grid-padding-inline;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 0.25rem;
 
   & > div {
     aspect-ratio: 1;

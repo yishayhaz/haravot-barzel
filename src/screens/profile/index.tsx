@@ -3,13 +3,15 @@ import { useRouter } from "next/router";
 import { Navbar } from "@/common/components/navbar";
 import Image from "next/image";
 import styles from "./style.module.scss";
-import { ContentGrid } from "@/common/components/content";
+import { Grid } from "@/common/components/grid";
+import { Post } from "@/common/components/post";
+import { AppScreen } from "@/common/components/app-screen";
 
 export function ProfileScreen() {
   const router = useRouter();
 
   return (
-    <>
+    <AppScreen>
       <div className={styles.profile_screen}>
         <section className={styles.profile}>
           <div className={styles.photo}>
@@ -44,23 +46,22 @@ export function ProfileScreen() {
         </section>
         <div className={styles.divider}></div>
         <section className={styles.content}>
-          <ContentGrid>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </ContentGrid>
+          <Grid>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+            <Post></Post>
+          </Grid>
         </section>
       </div>
-      <Navbar />
-    </>
+    </AppScreen>
   );
 }

@@ -1,11 +1,10 @@
-import { Navbar } from "@/common/components/navbar";
 import React from "react";
+import { AppScreen } from "@/common/components/app-screen";
 
 export function HomeScreen() {
   return (
-    <>
-      HomeScreen
-      <Navbar />
-    </>
+    <AppScreen>
+      <div>HomeScreen</div>
+    </AppScreen>
   );
 }
