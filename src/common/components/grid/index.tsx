@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./style.module.scss";
-import { Post } from "../post";
 
 export type GridProps = React.HTMLAttributes<HTMLDivElement>;
 

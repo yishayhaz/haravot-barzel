@@ -4,7 +4,10 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.25rem;
+
+  @include desktop {
+    gap: 0.25rem;
+  }
 
   & > div {
     aspect-ratio: 1;

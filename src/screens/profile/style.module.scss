@@ -1,5 +1,5 @@
 .profile_screen {
-  padding: $page-padding-block $content-padding-inline;
+  padding-block: $page-padding-block;
 
   @include flex(
     $dir: column,
@@ -7,18 +7,14 @@
     $align: stretch,
     $justify: flex-start
   );
-
-  .divider {
-    padding-block: 2px;
-    width: 100%;
-    background-color: $s-neutral-300;
-  }
 }
 
 .profile {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
+
+  padding-inline: $content-padding-inline;
 
   .photo {
     width: 200px;

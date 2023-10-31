@@ -1,2 +1,5 @@
 .container {
+  @include desktop {
+    padding-block: $page-padding-block;
+  }
 }

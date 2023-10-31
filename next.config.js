@@ -5,7 +5,7 @@ const nextConfig = {
     additionalData: `@use "src/styles/abstracts" as *;`,
   },
   images: {
-    domains: ["images.unsplash.com"],
+    domains: ["images.unsplash.com", "source.unsplash.com"],
   },
 };
 

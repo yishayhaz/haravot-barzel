@@ -44,21 +44,14 @@ export function ProfileScreen() {
             </p>
           </div>
         </section>
-        <div className={styles.divider}></div>
         <section className={styles.content}>
           <Grid>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
-            <Post></Post>
+            {Array.from({ length: 21 }).map((_, idx) => (
+              <Post
+                key={idx}
+                url={"https://source.unsplash.com/random?q=" + idx}
+              />
+            ))}
           </Grid>
         </section>
       </div>
