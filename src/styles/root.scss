@@ -18,6 +18,7 @@
     @include light-theme;
     color-scheme: light;
   }
+
   &[data-theme="dark"] {
     @include dark-theme;
     color-scheme: dark;

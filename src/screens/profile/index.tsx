@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { Navbar } from "@/common/components/navbar";
 import Image from "next/image";
 import styles from "./style.module.scss";
+import { ContentGrid } from "@/common/components/content";
 
 export function ProfileScreen() {
   const router = useRouter();
@@ -40,6 +41,23 @@ export function ProfileScreen() {
               nesciunt ab provident accusantium eos!
             </p>
           </div>
+        </section>
+        <div className={styles.divider}></div>
+        <section className={styles.content}>
+          <ContentGrid>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </ContentGrid>
         </section>
       </div>
       <Navbar />
