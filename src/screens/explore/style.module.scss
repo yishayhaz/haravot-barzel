@@ -1,0 +1,12 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+
+  padding: $page-padding-block $content-padding-inline;
+
+  div {
+    aspect-ratio: 1;
+    background-color: $s-neutral-300;
+  }
+}

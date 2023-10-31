@@ -2,18 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  direction: rtl;
 }
 
 :root {
   @include theme;
 }
 
-.app body[data-theme="light"] {
-  @include light-theme;
-  color-scheme: light;
-}
+.app body {
+  background-color: $s-neutral-bg;
+  color: $s-neutral-text;
 
-.app body[data-theme="dark"] {
-  @include dark-theme;
-  color-scheme: dark;
+  &[data-theme="light"] {
+    @include light-theme;
+    color-scheme: light;
+  }
+  &[data-theme="dark"] {
+    @include dark-theme;
+    color-scheme: dark;
+  }
 }
