@@ -4,7 +4,7 @@ import { Navbar } from "@/common/components/navbar";
 import Image from "next/image";
 import styles from "./style.module.scss";
 import { Grid } from "@/common/components/grid";
-import { Post } from "@/common/components/post";
+import { PostPreview } from "@/common/components/post";
 import { AppScreen } from "@/common/components/app-screen";
 
 export function ProfileScreen() {
@@ -47,7 +47,7 @@ export function ProfileScreen() {
         <section className={styles.content}>
           <Grid>
             {Array.from({ length: 21 }).map((_, idx) => (
-              <Post
+              <PostPreview
                 key={idx}
                 url={"https://source.unsplash.com/random?q=" + idx}
               />

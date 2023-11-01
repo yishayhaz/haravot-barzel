@@ -1,0 +1,49 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  background: red;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+
+    .details {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "avatar name"
+        "avatar time";
+      gap: 0 1rem;
+
+      h2 {
+        grid-area: name;
+      }
+
+      time {
+        grid-area: time;
+      }
+
+      img {
+        grid-area: avatar;
+
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+
+    .photo {
+      aspect-ratio: 1;
+
+      width: 600px;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
