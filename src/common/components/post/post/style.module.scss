@@ -1,48 +1,114 @@
 .post {
+  width: 400px;
+  margin: 3rem auto;
+
   display: flex;
   flex-direction: column;
-  background: red;
 
-  .top {
+  border: 1px solid red;
+
+  .user {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+
+    background: $s-neutral-bg;
+    box-shadow: 0 0 10px rgba(var(--neutral), 0.3);
+
+    display: grid;
+    grid-template-columns: 35px 1fr auto;
+    grid-template-areas:
+      "avatar name actions"
+      "avatar date actions";
+    gap: 0 8px;
+
+    img {
+      grid-area: avatar;
+
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+    }
+
+    h1 {
+      grid-area: name;
+
+      font-size: 0.85rem;
+    }
+
+    time {
+      grid-area: date;
+
+      font-size: 0.75rem;
+    }
+
+    .actions {
+      grid-area: actions;
+
+      @include flex;
+    }
+  }
+
+  .photo {
+    aspect-ratio: 1;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    padding: 1rem;
+
+    p {
+      @include clamp-lines(2);
+      font-size: 0.8rem;
+    }
+  }
+
+  .interactions {
     display: flex;
-    flex-direction: column;
 
-    .details {
+    button {
+      flex: 1;
+
+      padding: 0.5rem;
+    }
+  }
+
+  .comments {
+    .comment {
+      padding: 1rem;
+
       display: grid;
-      grid-template-columns: 50px 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 35px 1fr;
       grid-template-areas:
         "avatar name"
-        "avatar time";
-      gap: 0 1rem;
-
-      h2 {
-        grid-area: name;
-      }
-
-      time {
-        grid-area: time;
-      }
+        "avatar content";
+      gap: 0 8px;
 
       img {
         grid-area: avatar;
 
-        width: 50px;
-        height: 50px;
+        width: 35px;
+        height: 35px;
         border-radius: 50%;
       }
-    }
 
-    .photo {
-      aspect-ratio: 1;
+      h1 {
+        grid-area: name;
 
-      width: 600px;
-      overflow: hidden;
+        font-size: 0.85rem;
+      }
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+      p {
+        grid-area: content;
+
+        @include clamp-lines(2);
+        font-size: 0.8rem;
       }
     }
   }
