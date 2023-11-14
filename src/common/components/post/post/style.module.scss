@@ -1,93 +1,32 @@
 .post {
-  width: 400px;
-  margin: 3rem auto;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: column;
 
-  border: 1px solid red;
+  @include tablet-and-desktop {
+    max-width: 600px;
+  }
 
-  .user {
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-
+  .header {
+    @include flex($justify: space-between);
+    height: 80px;
     background: $s-neutral-bg;
     box-shadow: 0 0 10px rgba(var(--neutral), 0.3);
 
-    display: grid;
-    grid-template-columns: 35px 1fr auto;
-    grid-template-areas:
-      "avatar name actions"
-      "avatar date actions";
-    gap: 0 8px;
+    border-radius: 12px 12px 0 0;
 
-    img {
-      grid-area: avatar;
-
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-    }
-
-    h1 {
-      grid-area: name;
-
-      font-size: 0.85rem;
-    }
-
-    time {
-      grid-area: date;
-
-      font-size: 0.75rem;
-    }
-
+    .user,
     .actions {
-      grid-area: actions;
-
-      @include flex;
-    }
-  }
-
-  .photo {
-    aspect-ratio: 1;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .content {
-    padding: 1rem;
-
-    p {
-      @include clamp-lines(2);
-      font-size: 0.8rem;
-    }
-  }
-
-  .interactions {
-    display: flex;
-
-    button {
-      flex: 1;
-
-      padding: 0.5rem;
-    }
-  }
-
-  .comments {
-    .comment {
       padding: 1rem;
+    }
 
+    .user {
       display: grid;
-      grid-template-columns: 35px 1fr;
+      grid-template-columns: 35px 1fr auto;
       grid-template-areas:
-        "avatar name"
-        "avatar content";
+        "avatar name actions"
+        "avatar date actions";
       gap: 0 8px;
 
       img {
@@ -104,12 +43,45 @@
         font-size: 0.85rem;
       }
 
-      p {
-        grid-area: content;
+      time {
+        grid-area: date;
 
-        @include clamp-lines(2);
-        font-size: 0.8rem;
+        font-size: 0.75rem;
       }
+    }
+  }
+
+  .content {
+    overflow-y: auto;
+    max-height: calc(100vh - 4rem - 50px);
+
+    @include mobile {
+      max-height: calc(100vh - 50px);
+    }
+
+    .photo {
+      aspect-ratio: 1;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .interactions {
+      display: flex;
+      padding: 1rem;
+
+      button {
+        flex: 1;
+
+        padding: 0.5rem;
+      }
+    }
+
+    .comments {
     }
   }
 }
