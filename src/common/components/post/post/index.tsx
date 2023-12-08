@@ -4,6 +4,10 @@ import styles from "./style.module.scss";
 import { Comment, CommentsWrapper } from "@/common/components/comment";
 import { IoClose } from "react-icons/io5";
 
+export type PostProps = {
+  onClose?: () => void;
+};
+
 const comments = [
   {
     user: {
@@ -179,7 +183,7 @@ const comments = [
   },
 ];
 
-export function Post() {
+export function Post({ onClose = () => {} }: PostProps) {
   return (
     <div className={styles.post}>
       <div className={styles.header}>
@@ -194,7 +198,7 @@ export function Post() {
           <time>1h</time>
         </div>
         <div className={styles.actions}>
-          <button>
+          <button onClick={onClose}>
             <IoClose />
           </button>
         </div>
